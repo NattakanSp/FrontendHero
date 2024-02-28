@@ -9,7 +9,7 @@ function newGang(arr) {
         genger: item.gender,
         email: item.email,
         company: item.company,
-        balance: parseFloat(item.balance.substring(1, item.balance.length).split(",").join("")) / 10,
+        balance: `$${parseFloat(item.balance.substring(1, item.balance.length).split(",").join("")) / 10}`,
         friends: item.friends,
       };
     });
