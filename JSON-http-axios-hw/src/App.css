@@ -1,0 +1,140 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.to-do-card {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px #cdcdcf;
+}
+.to-do-card .add-to-do {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: rgb(0, 18, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 18, 36, 0.7343312324929971) 0%,
+    rgba(16, 68, 241, 0.9360119047619048) 24%,
+    rgba(0, 181, 255, 1) 77%
+  );
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.add-to-do h3 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.add-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  width: 70vw;
+}
+.add-input .add-task {
+  width: 50%;
+  height: 50px;
+  border: 1px solid white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.add-input .add-due {
+  width: 10%;
+  height: 50px;
+  border: 1px solid white;
+}
+.add-input button {
+  width: 10%;
+  height: 100%;
+  border: 2px solid white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.task-lists {
+  height: max-content;
+  padding: 10px 0;
+}
+.tasks {
+  margin: 20px;
+  color: rgb(53, 53, 53);
+}
+.task-card {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.task-card .task-list,
+.task-card .input-task {
+  height: 100%;
+  width: 50%;
+  background: #ebebebec;
+  color: black;
+  display: flex;
+  align-items: center;
+  border: none;
+  text-align: start;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 0;
+}
+.task-card .input-date,
+.task-card .p-date {
+  height: 100%;
+  width: 20%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: black;
+  background: #ebebebec;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 0;
+  border: none;
+}
+.task-card .span-status,
+.task-card .input-status {
+  height: 100%;
+  width: 10%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgb(9, 210, 9);
+  background: #ebebebec;
+  border: none;
+}
+.task-card .del-icon {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  color: red;
+  text-align: center;
+  background: #ebebebec;
+  border-top-left-radius: 5px;
+}
+.task-card .edit-icon {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  color: black;
+  text-align: center;
+  background: #ebebebec;
+}
+.btn {
+  background: #ebebebec;
+  color: rgb(44, 104, 243);
+  border-radius: 5px;
+  border: 1px solid rgb(44, 104, 243);
+}
