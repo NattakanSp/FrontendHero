@@ -1,3 +1,3 @@
-export const END_POINT = "https://crudcrud.com/api/a98756570886479b86cfd169ff5b7900";
+export const END_POINT = "https://crudcrud.com/api/8b397c6ae2284687a5795e7881a1c7c9";
 export const RESOURCE_TASKS = "/tasks";
 // export const RESOURCE_USERS = "/users";

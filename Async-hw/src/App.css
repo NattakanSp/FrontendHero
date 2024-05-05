@@ -1,0 +1,63 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+label {
+  padding-right: 10px;
+}
+.employee-card {
+  width: 30vw;
+  height: fit-content;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(20, 53, 109);
+  background: #edeeee;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.add-employee {
+  height: 100%;
+  text-align: start;
+}
+.fname-input,
+.lname-input {
+  width: 80%;
+  height: 30px;
+  margin: 20px 0;
+  border: 1px solid rgb(14, 13, 13);
+  border-radius: 5px;
+  border-radius: 5px;
+  padding: 2px;
+}
+.select-box {
+  margin: 20px 0;
+}
+.select-box label {
+  padding: 0 20px 0 0;
+}
+.select-box select {
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+}
+.btn {
+  background: #757181ec;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width: fit-content;
+  text-align: center;
+  padding: 5px;
+}
+table,
+th,
+tr,
+td {
+  border: 1px solid #909696;
+  border-spacing: 0px;
+}
