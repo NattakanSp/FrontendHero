@@ -1,68 +1,73 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { END_POINT, RESOURCE_QUEUES } from "./constant";
+import InputForm from "./assets/componant/Input";
+import QueueList from "./assets/componant/QueueList";
+
 
 function App() {
-  const [queues, setQueues] = useState([""]);
+  const [queues, setQueues] = useState([]);
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
 
-  const changeName = (e) => {
-    setFname(e.target.value);
-    console.log(fname);
-  };
-  const changeLastName = (e) => {
-    setLname(e.target.value);
-    console.log(lname);
-  };
+  useEffect(() => {
+    const storedQueues = localStorage.getItem("queues");
+    if (storedQueues) {
+      setQueues(JSON.parse(storedQueues));
+    } else {
+      fetchQueue();
+    }
+  }, []);
 
-  const clickQueue = () => {
-    setFname("");
-    setLname("");
-    const body = {
-      fname,
-      lname,
-    };
-    axios.post(END_POINT + RESOURCE_QUEUES, body);
-  };
+  useEffect(() => {
+    if (queues.length > 0) {
+      localStorage.setItem("queues", JSON.stringify(queues));
+    }
+  }, [queues]);
 
   const fetchQueue = () => {
     axios.get(END_POINT + RESOURCE_QUEUES).then((res) => {
-      console.log("res :", res);
       setQueues(res.data);
+      console.log("queses: ", queues)
     });
   };
 
-  const delQueue = () => {
+  const handleAddQueue = () => {
+    if (fname && lname) {
+      const body = { fname, lname };
+      axios.post(END_POINT + RESOURCE_QUEUES, body).then(() => {
+        fetchQueue();
+        setFname("");
+        setLname("");
+      });
+    }
+  };
+
+  const handleDeleteQueue = () => {
+    if (queues.length === 0) {
+      alert("No queue to move.");
+      return;
+    }
     const firstQueue = queues[0];
     axios.delete(END_POINT + RESOURCE_QUEUES + `/${firstQueue._id}`).then(() => {
-      alert("move queue successfully");
+      const updatedQueues = queues.filter((queue) => queue._id !== firstQueue._id);
+      setQueues(updatedQueues);
+      alert("Moved queue successfully");
     });
   };
 
   return (
-    <>
-      <div className="queue-box">
-        <button onClick={fetchQueue}>Fetch</button>
-        <div className="queue-form">
-          <input type="text" id="fname" name="fname" placeholder="First name" value={fname} onChange={changeName} />
-          <input type="text" id="lname" name="lname" placeholder="Last name" value={lname} onChange={changeLastName} />
-          <button onClick={clickQueue}>ต่อคิว</button>
-        </div>
-        <div className="queue">
-          <h2>รายชื่อคิว</h2>
-          <ol>
-            {queues.map((item) => (
-              <li key={item._id}>
-                {item.fname} {item.lname}
-              </li>
-            ))}
-          </ol>
-          <button onClick={delQueue}>เชิญคิวถัดไป</button>
-        </div>
-      </div>
-    </>
+    <div className="queue-box">
+      <InputForm
+        fname={fname}
+        lname={lname}
+        onFnameChange={(e) => setFname(e.target.value)}
+        onLnameChange={(e) => setLname(e.target.value)}
+        onAddQueue={handleAddQueue}
+      />
+      <QueueList queues={queues} onDeleteQueue={handleDeleteQueue} />
+    </div>
   );
 }
 

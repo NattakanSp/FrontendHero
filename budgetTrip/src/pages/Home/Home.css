@@ -1,0 +1,83 @@
+/* Home.css */
+.rounded-2 {
+  border-radius: 2px;
+}
+.rounded-4 {
+  border-radius: 4px;
+}
+
+.rounded-8 {
+  border-radius: 8px;
+}
+.search-icon {
+  width: 80px;
+  height: 40px;
+  border: 1px solid #d10e04;
+  background: #d10e04;
+  color: #ffff;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-account {
+  width: 80px;
+  height: 40px;
+  border: 1px solid #d10e04;
+  background: #d10e04;
+  color: #ffff;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-menu,
+.btn-menu:hover {
+  border: 1px solid #1c1c1c;
+  height: 40px;
+  background: #ffff;
+  color: #1c1c1c;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+}
+.bg-grey {
+  background-color: #f0f0f0;
+}
+.form-check-input.is-valid,
+.was-validated .form-check-input:valid {
+  border-color: #d10e04;
+}
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+  color: #000000;
+}
+.form-check-input.is-valid:checked,
+.was-validated .form-check-input:valid:checked {
+  background-color: #d10e04;
+}
+.side-bar {
+  min-height: 70vh;
+  height: fit-content;
+}
+.photo-hotel {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+}
+.img-view-xl {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.img-view-m {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+}

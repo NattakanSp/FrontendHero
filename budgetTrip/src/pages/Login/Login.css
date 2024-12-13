@@ -1,0 +1,58 @@
+.btn-menu,
+.btn-menu:hover {
+  border: 1px solid #1c1c1c;
+  padding: 5px 10px;
+  background: #ffff;
+  color: #1c1c1c;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+}
+div.modal-content .btn-menu,
+div.modal-content .btn-blue {
+  width: fit-content;
+  align-self: center;
+}
+.btn-blue {
+  border: 1px solid #1f37f3;
+  background: #1f37f3;
+  color: #ffff;
+  padding: 5px 10px;
+  border-radius: 0.375rem;
+}
+.modal-footer {
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+.btn-google,
+.btn-google:hover {
+  background-color: white;
+  border: 1px solid #1f37f3;
+  color: #1f37f3;
+}
+.valid-password {
+  border-color: #198754 !important;
+}
+
+.valid-password:focus {
+  border-color: #198754 !important;
+}
+
+.valid-password ~ .invalid-feedback {
+  display: none;
+}
+.valid-email {
+  border-color: #198754 !important;
+}
+
+.valid-email:focus {
+  border-color: #198754 !important;
+}
+
+.valid-email ~ .invalid-feedback {
+  display: none;
+}

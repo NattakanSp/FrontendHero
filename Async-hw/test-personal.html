@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="test.personal.css"></link>
+</head>
+
+<body>
+    <form id="tourForm">
+        <div class="form-group">
+            <label for="budget">Budget:</label>
+            <select id="budget" name="budget">
+                <option value="Less than $500">Less than $500</option>
+                <option value="$500 - $1000">$500 - $1000</option>
+                <!-- Add other budget options here -->
+            </select>
+        </div>
+        <!-- Add other form fields (duration, destination, etc.) similarly -->
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <select id="duration" name="duration">
+                <option value="1-3 days">1-3 days</option>
+                <option value="4-7 days">4-7 days</option>
+                <!-- Add other duration options here -->
+            </select>
+        </div>
+        <!-- Add more form groups for other questions -->
+        <div class="form-group">
+            <label for="interests">Interests:</label>
+            <input type="checkbox" id="adventure" name="interests" value="Adventure">
+            <label for="adventure">Adventure</label>
+            <input type="checkbox" id="culture" name="interests" value="Culture">
+            <label for="culture">Culture</label>
+            <!-- Add other interest options here -->
+        </div>
+        <!-- Add submit button -->
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

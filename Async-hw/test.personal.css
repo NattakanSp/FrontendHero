@@ -1,0 +1,21 @@
+/* Style form container */
+#tourForm {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Style form groups */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Style labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Style input elements */
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }

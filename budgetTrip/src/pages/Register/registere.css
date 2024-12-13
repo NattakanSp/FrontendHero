@@ -1,0 +1,12 @@
+.btn-blue {
+  border: 1px solid #1f37f3;
+  background: #1f37f3;
+  color: #ffff;
+  padding: 5px 10px;
+  border-radius: 0.375rem;
+}
+.btn-google {
+  background-color: white;
+  border: 1px solid #1f37f3;
+  color: #1f37f3;
+}
