@@ -29,6 +29,8 @@ body {
   padding: 20px;
 }
 .queue-form input {
+  margin: 0.3rem 0;
+  padding: 0.5rem;
   font-size: 12px;
   width: 100%;
   height: 40px;
@@ -37,11 +39,11 @@ body {
 }
 .queue-box button {
   width: 100px;
-  height: 40px;
+  height: 80px;
   background: #040405;
   color: rgb(250, 250, 249);
   border: 1px solid black;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 .queue-form button {

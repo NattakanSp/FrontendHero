@@ -16,7 +16,7 @@ function App() {
     if (storedQueues) {
       setQueues(JSON.parse(storedQueues));
     } else {
-      fetchQueue();
+      // fetchQueue();
     }
   }, []);
 
@@ -26,18 +26,18 @@ function App() {
     }
   }, [queues]);
 
-  const fetchQueue = () => {
-    axios.get(END_POINT + RESOURCE_QUEUES).then((res) => {
-      setQueues(res.data);
-      console.log("queses: ", queues)
-    });
-  };
+  // const fetchQueue = () => {
+  //   axios.get(END_POINT + RESOURCE_QUEUES).then((res) => {
+  //     setQueues(res.data);
+  //     console.log("queses: ", queues)
+  //   });
+  // };
 
   const handleAddQueue = () => {
     if (fname && lname) {
       const body = { fname, lname };
       axios.post(END_POINT + RESOURCE_QUEUES, body).then(() => {
-        fetchQueue();
+        // fetchQueue();
         setFname("");
         setLname("");
       });
